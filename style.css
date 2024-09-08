@@ -57,7 +57,7 @@ img { max-width: 100%; }
 
 body {
     font-family: "Libre Baskerville", serif;
-    color: rgb(65,60,60)
+    color: rgb(65,60,60);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -92,6 +92,8 @@ a {
     text-decoration: none;
 }
 
+a:hover { color: #F59186; }
+
 ul { margin: 1rem; }
 
 li { padding-left: 0.5rem; }
@@ -120,8 +122,12 @@ li { padding-left: 0.5rem; }
 
 footer {
     padding-bottom: 0.5rem;
-    color: rgb(125,120,120;)
+    color: rgb(145,140,140);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
+
+footer p { font-size: 0.8rem; }
 
 /* Images & Background Images */
 
@@ -136,7 +142,6 @@ footer {
     background-position: 50% 31%;
 }
 
-.bg-light-leaves  { background-image: url('/images/zen-light.png');  }
 .bg-map           { background-image: url('/images/zen-map.png');    }
 .bg-stone         { background-image: url('/images/zen-stone.png');  }
 .bg-studio        { background-image: url('/images/zen-studio.jpg'); }
@@ -150,4 +155,39 @@ footer {
     border-top-left-radius: 20rem;
     border-top-right-radius: 20rem; 
     
+}
+
+/*  Gridlex Media Queries
+
+@media (max-width: 36em)	Max 576px	_xs-*
+@media (max-width: 48em)	Max 768px	_sm-*
+@media (max-width: 64em)	Max 1024px	_md-*
+@media (max-width: 80em)	Max 1280px	_lg-*
+
+*/
+
+/* Gridlex small media query */
+
+@media (max-width: 48em) {
+    .text-xxl { font-size: 6.5rem; }
+    .text-xl  { font-size: 3.5rem; }
+    .sm-block { display: block;    }
+    .text-center-sm { text-align: center; }
+
+    .bg-leaves { 
+        background-image: url('/images/zen-light.png');
+        
+    }
+}
+
+/* Gridlex extra small media query */
+
+@media (max-width: 36em) {
+    .text-xxl { font-size: 4.5rem; }
+    .text-xl  { font-size: 2.5rem; }
+    .text-l   { font-size: 2.5rem; }
+}
+
+@media (max-width: 25em) {
+    .text-xxl { font-size: 2.5rem; }
 }
